@@ -80,7 +80,7 @@ const Products = () => {
           <h2 className="text-4xl font-bold text-gray-900">Our Products</h2>
           <div className="w-16 h-1 bg-green-600 mx-auto mt-4 rounded mb-6"></div>
           <p className="text-gray-600 max-w-2xl mx-auto text-lg">
-            Explore our premium range of standardized extracts and natural products.
+            Explore our Premium range of export-grade agricultural products, premium herbal extracts, and sustainable organic fertilizers to global markets.
           </p>
         </div>
 
