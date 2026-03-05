@@ -16,7 +16,7 @@ const About = () => {
 
         {/* Main About Content */}
         <div className="mb-16 max-w-4xl mx-auto text-gray-600 leading-relaxed text-lg">
-          <p className="text-center text-xl mb-2">
+          <p className="text-center text-lg mb-2">
             Scentorgo Overseas is a distinguished manufacture and export enterprise specializing in premium Agricultural Products, high-potency Herbal Extracts, and advanced Organic Fertilizers for global markets.
             
             {/* WhatsApp style inline Read More toggle for when it's closed */}
