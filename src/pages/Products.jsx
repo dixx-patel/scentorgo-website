@@ -110,7 +110,10 @@ const groupedAgriProducts = agriculturalProducts.reduce((groups, product) => {
 }, {});
 
 const Products = () => {
+  // Main category toggle
   const [activeCategory, setActiveCategory] = useState("Herbal Products");
+  // Subcategory toggle for Agricultural Products
+  const [activeAgriCategory, setActiveAgriCategory] = useState(null);
 
   const categories = [
     "Agricultural Products",
@@ -135,7 +138,11 @@ const Products = () => {
           {categories.map((category) => (
             <button
               key={category}
-              onClick={() => setActiveCategory(activeCategory === category ? null : category)}
+              onClick={() => {
+                setActiveCategory(activeCategory === category ? null : category);
+                // Reset subcategory toggle when changing main categories
+                setActiveAgriCategory(null); 
+              }}
               className={`px-6 py-3 rounded-full font-semibold transition-all duration-300 shadow-sm ${
                 activeCategory === category
                   ? "bg-green-600 text-white shadow-md scale-105"
@@ -167,27 +174,39 @@ const Products = () => {
               </div>
             )}
 
-            {/* Agricultural Products - Grouped by Category */}
+            {/* Agricultural Products - Accordion Toggle Grouped by Category */}
             {activeCategory === "Agricultural Products" && (
-              <div className="space-y-16">
+              <div className="space-y-4">
                 {Object.entries(groupedAgriProducts).map(([categoryName, products]) => (
-                  <div key={categoryName}>
-                    {/* Group Header */}
-                    <div className="mb-6 border-b border-gray-200 pb-2">
-                      <h3 className="text-2xl font-bold text-green-700">{categoryName}</h3>
-                    </div>
+                  <div key={categoryName} className="bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden">
                     
-                    {/* Group Grid - Height and padding reduced */}
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-                      {products.map((product, index) => (
-                        <div 
-                          key={index} 
-                          className="bg-white rounded-2xl p-6 border border-gray-100 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group flex flex-col items-center justify-center text-center min-h-24"
-                        >
-                          <h4 className="text-xl font-bold text-gray-900">{product.name}</h4>
+                    {/* Toggle Button for Subcategory */}
+                    <button
+                      onClick={() => setActiveAgriCategory(activeAgriCategory === categoryName ? null : categoryName)}
+                      className="w-full px-8 py-5 flex justify-between items-center text-left hover:bg-green-50 transition-colors duration-300 focus:outline-none"
+                    >
+                      <h3 className="text-xl font-bold text-green-700">{categoryName}</h3>
+                      <span className="text-green-700 text-2xl font-medium leading-none">
+                        {activeAgriCategory === categoryName ? "−" : "+"}
+                      </span>
+                    </button>
+                    
+                    {/* Subcategory Grid - Shows only if active */}
+                    {activeAgriCategory === categoryName && (
+                      <div className="px-8 pb-8 pt-2 border-t border-gray-100 bg-gray-50/50">
+                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mt-6">
+                          {products.map((product, index) => (
+                            <div 
+                              key={index} 
+                              className="bg-white rounded-2xl p-6 border border-gray-200 shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-300 group flex flex-col items-center justify-center text-center min-h-24"
+                            >
+                              <h4 className="text-lg font-bold text-gray-900">{product.name}</h4>
+                            </div>
+                          ))}
                         </div>
-                      ))}
-                    </div>
+                      </div>
+                    )}
+
                   </div>
                 ))}
               </div>
