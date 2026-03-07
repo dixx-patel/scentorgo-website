@@ -12,7 +12,7 @@ const Contact = () => {
         </div>
 
         <div className="grid md:grid-cols-2 gap-16 max-w-5xl mx-auto">
-          {/* Info Side */}
+          
           <div className="space-y-8">
             <h3 className="text-2xl font-bold text-gray-900">Get in Touch</h3>
             
@@ -41,7 +41,7 @@ const Contact = () => {
             </div>
           </div>
 
-          {/* Form Side */}
+         
           <div className="bg-gray-50 p-8 rounded-3xl border border-gray-100 shadow-sm">
             <form className="space-y-5">
               <div className="grid grid-cols-2 gap-5">

@@ -12,10 +12,6 @@ const Home = () => {
           <span className="text-green-700">Live Herbal</span>
         </h1>
         
-        <p className="mt-4 text-lg md:text-xl text-gray-600 max-w-2xl mx-auto font-light leading-relaxed mb-10">
-          Bringing the healing power of nature into everyday life with authentic, high-quality herbal extracts. A trusted exporter based in Gujarat, India.
-        </p>
-        
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
           <a href="#products" className="bg-green-700 hover:bg-green-800 transition px-8 py-3.5 rounded-full text-white font-semibold shadow-lg shadow-green-200">
             Explore Products ➔

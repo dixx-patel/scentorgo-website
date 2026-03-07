@@ -19,7 +19,7 @@ const About = () => {
           <p className="text-center text-lg mb-2">
             Scentorgo Overseas is a distinguished manufacture and export enterprise specializing in premium Agricultural Products, high-potency Herbal Extracts, and advanced Organic Fertilizers for global markets.
             
-            {/* WhatsApp style inline Read More toggle for when it's closed */}
+            {/* Read More toggle for when it's closed */}
             {!isExpanded && (
               <span>... <button onClick={() => setIsExpanded(true)} className="text-green-600 font-medium hover:text-green-700 cursor-pointer">Read more</button></span>
             )}
