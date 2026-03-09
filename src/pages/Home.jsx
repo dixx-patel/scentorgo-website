@@ -4,11 +4,13 @@ const Home = () => {
     <section id="home" className="min-h-[60vh] pt-20 flex flex-col justify-center items-center text-center px-6 bg-gray-50">
       
       <div className="max-w-4xl mx-auto">
-        <p className="text-green-600 font-semibold tracking-widest uppercase mb-4">
+        {/* Increased text size using text-xl for mobile and md:text-2xl for larger screens */}
+        <p className="text-xl md:text-2xl text-green-600 font-semibold tracking-widest uppercase mb-4">
           Welcome to Scentorgo Overseas
         </p>
         
-        <h1 className="text-5xl md:text-7xl font-extrabold text-gray-900 leading-tight mb-6">
+        {/* Decreased text size from 5xl/7xl down to 4xl/5xl */}
+        <h1 className="text-4xl md:text-5xl font-extrabold text-gray-900 leading-tight mb-6">
           Live Naturally, <br />
           <span className="text-green-700">Live Herbal</span>
         </h1>
