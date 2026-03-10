@@ -317,24 +317,47 @@ const Products = () => {
           </p>
         </div>
 
-        {/* Category Selection Buttons */}
-        <div className="flex flex-wrap justify-center gap-4 mb-16">
-          {categories.map((category) => (
+       {/* Category Selection Image Cards */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
+          {[
+            { name: "Agricultural Products", img: "/agriprdt.jpeg" },
+            { name: "Herbal Products", img: "/herbals.jpeg" },
+            { name: "Organic Fertilizers", img: "/organics.jpeg" }
+          ].map((cat) => (
             <button
-              key={category}
+              key={cat.name}
               onClick={() => {
-                setActiveCategory(activeCategory === category ? null : category);
+                setActiveCategory(activeCategory === cat.name ? null : cat.name);
                 // Reset subcategory toggles when changing main categories
                 setActiveAgriCategory(null);
                 setActiveOrganicCategory(null);
               }}
-              className={`px-6 py-3 rounded-full font-semibold transition-all duration-300 shadow-sm ${
-                activeCategory === category
-                  ? "bg-green-600 text-white shadow-md scale-105"
-                  : "bg-white text-gray-700 border border-gray-200 hover:bg-green-50 hover:text-green-700"
+              className={`relative h-48 w-full rounded-2xl overflow-hidden group shadow-md transition-all duration-300 ${
+                activeCategory === cat.name
+                  ? "ring-4 ring-green-600 scale-105 shadow-xl"
+                  : "opacity-90 hover:opacity-100 hover:shadow-lg"
               }`}
             >
-              {category}
+              {/* Background Image */}
+              <img
+                src={cat.img}
+                alt={cat.name}
+                className="absolute inset-0 w-full h-full object-cover transform transition-transform duration-500 group-hover:scale-110"
+              />
+              
+              {/* Dark Overlay for Text Readability */}
+              <div 
+                className={`absolute inset-0 transition-colors duration-300 ${
+                  activeCategory === cat.name ? "bg-black/30" : "bg-black/50 group-hover:bg-black/40"
+                }`}
+              ></div>
+              
+              {/* Category Title */}
+              <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+                <h3 className="text-white text-2xl md:text-3xl font-bold text-center px-4 tracking-wide drop-shadow-md">
+                  {cat.name}
+                </h3>
+              </div>
             </button>
           ))}
         </div>
