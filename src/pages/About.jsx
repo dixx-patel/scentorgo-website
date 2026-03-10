@@ -64,13 +64,17 @@ const About = () => {
           )}
         </div>
 
-        {/* Vision & Mission Cards */}
+       {/* Vision & Mission Cards */}
         <div className="grid md:grid-cols-2 gap-8">
           
           {/* Vision Card */}
           <div className="bg-gray-50 p-10 rounded-3xl border border-gray-100 hover:shadow-md transition-shadow">
-            <div className="w-14 h-14 bg-white rounded-2xl flex items-center justify-center text-3xl shadow-sm mb-6">👁️</div>
-            <h3 className="text-2xl font-bold text-gray-900 mb-4">Our Vision</h3>
+            {/* Flex container to put icon and title side-by-side */}
+            <div className="flex items-center gap-4 mb-6">
+              <div className="w-14 h-14 bg-white rounded-2xl flex shrink-0 items-center justify-center text-3xl shadow-sm">👁️</div>
+              <h3 className="text-2xl font-bold text-gray-900">Our Vision</h3>
+            </div>
+            
             <div className="text-gray-600 leading-relaxed space-y-4">
               <p>
                 To become a dominant global export leader in agricultural and natural solutions by setting new industry benchmarks in quality, supply chain efficiency, and market expansion.
@@ -83,8 +87,12 @@ const About = () => {
 
           {/* Mission Card */}
           <div className="bg-gray-50 p-10 rounded-3xl border border-gray-100 hover:shadow-md transition-shadow">
-            <div className="w-14 h-14 bg-white rounded-2xl flex items-center justify-center text-3xl shadow-sm mb-6">🎯</div>
-            <h3 className="text-2xl font-bold text-gray-900 mb-4">Our Mission</h3>
+            {/* Flex container to put icon and title side-by-side */}
+            <div className="flex items-center gap-4 mb-6">
+              <div className="w-14 h-14 bg-white rounded-2xl flex shrink-0 items-center justify-center text-3xl shadow-sm">🎯</div>
+              <h3 className="text-2xl font-bold text-gray-900">Our Mission</h3>
+            </div>
+            
             <div className="text-gray-600 leading-relaxed space-y-4">
               <p>
                 To aggressively expand our global footprint by delivering superior agricultural products, high-performance herbal extracts, and advanced organic fertilizers that exceed international quality standards.
