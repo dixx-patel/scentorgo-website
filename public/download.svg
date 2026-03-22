@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <!-- Background circle -->
+  <circle cx="32" cy="32" r="30" fill="#0b3d2e"></circle>
+  
+  <!-- Leaf cluster -->
+  <g fill="#6fbf73">
+    <path d="M32 10c6 8 6 14 0 22-6-8-6-14 0-22z"></path>
+    <path d="M54 32c-8 6-14 6-22 0 8-6 14-6 22 0z"></path>
+    <path d="M32 54c-6-8-6-14 0-22 6 8 6 14 0 22z"></path>
+    <path d="M10 32c8-6 14-6 22 0-8 6-14 6-22 0z"></path>
+  </g>
+  
+  <!-- Center accent -->
+  <circle cx="32" cy="32" r="3" fill="#a5d6a7"></circle>
+</svg>

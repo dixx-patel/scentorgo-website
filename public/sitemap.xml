@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <url>
+    <loc>https://scentorgo.com/</loc>
+    <lastmod>2026-03-22</lastmod>
+    <priority>1.0</priority>
+  </url>
+
+  <!-- Hash routes (limited SEO benefit) -->
+  <url>
+    <loc>https://scentorgo.com/#home</loc>
+  </url>
+
+  <url>
+    <loc>https://scentorgo.com/#about</loc>
+  </url>
+
+  <url>
+    <loc>https://scentorgo.com/#products</loc>
+  </url>
+
+  <url>
+    <loc>https://scentorgo.com/#contact</loc>
+  </url>
+
+</urlset>
