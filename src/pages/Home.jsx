@@ -1,6 +1,7 @@
+import { Link } from "react-router-dom"; // 1. Import Link from react-router-dom
+
 const Home = () => {
   return (
-    // Change min-h-[60vh] to min-h-[80vh]
     <section
       id="home"
       className="relative min-h-[90vh] pt-20 flex flex-col justify-center items-center text-center px-6 bg-[url('/scentorgobgimg.png')] bg-cover bg-center bg-no-repeat"
@@ -22,20 +23,21 @@ const Home = () => {
         </h1>
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-          <a
-            href="#products"
+          {/* 2. Changed <a> to <Link> and href to 'to="/products"' */}
+          <Link
+            to="/products"
             className="bg-green-700 hover:bg-green-600 transition px-8 py-3.5 rounded-full text-white font-semibold shadow-lg shadow-green-900/50"
           >
             Explore Products ➔
-          </a>
+          </Link>
 
-          {/* Updated this button with a modern "glass" effect for background images */}
-          <a
-            href="#contact"
+          {/* 3. Changed <a> to <Link> and href to 'to="/contact"' */}
+          <Link
+            to="/contact"
             className="bg-white/10 backdrop-blur-sm hover:bg-white/20 border border-white/50 transition px-8 py-3.5 rounded-full text-white font-semibold shadow-sm"
           >
             Contact Us
-          </a>
+          </Link>
         </div>
       </div>
     </section>

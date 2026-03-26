@@ -132,8 +132,8 @@ const HerbalPage = () => {
         
         {/* Navigation Back */}
         <div className="mb-8">
-          <Link to="/" className="text-green-600 hover:text-green-800 font-semibold flex items-center gap-2 transition-colors">
-            <span>&larr;</span> Back to Home
+          <Link to="/products" className="text-green-600 hover:text-green-800 font-semibold flex items-center gap-2 transition-colors">
+            <span>&larr;</span> Back to Products
           </Link>
         </div>
 
